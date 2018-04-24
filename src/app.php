@@ -64,7 +64,7 @@ $app->match('/add', function (Request $request) use ($app) {
     }
 
     return $app['twig']->render('add.twig', array(
-        'title' => 'Share Your Thought!',
+        'title' => 'Comparte tu pensamiento!',
         'alert' => $alert,
     ));
 });
