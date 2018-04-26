@@ -26,7 +26,7 @@ $app->match('/', function () use ($app) {
     $thoughts = $query->execute() ? $query->fetchAll(PDO::FETCH_ASSOC) : array();
 
     return $app['twig']->render('index.twig', array(
-        'title'    => 'Your Thoughts',
+        'title'    => 'Tus pensamientos',
         'thoughts' => $thoughts,
     ));
 });
@@ -64,7 +64,7 @@ $app->match('/add', function (Request $request) use ($app) {
     }
 
     return $app['twig']->render('add.twig', array(
-        'title' => 'Share Your Thought!',
+        'title' => 'Comparte tu pensamiento!',
         'alert' => $alert,
     ));
 });
